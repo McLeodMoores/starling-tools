@@ -18,6 +18,7 @@ import org.apache.commons.lang.Validate;
 import org.reflections.Configuration;
 import org.reflections.Reflections;
 import org.reflections.scanners.TypeAnnotationsScanner;
+import org.reflections.scanners.SubTypesScanner;
 import org.reflections.util.ClasspathHelper;
 import org.reflections.util.ConfigurationBuilder;
 
@@ -81,10 +82,10 @@ public final class ScriptUtils {
     Validate.notNull(annotationClass, "annotationClass");
     Validate.notNull(classLoader, "classLoader");
     Set<URL> initialUrls = new HashSet<>(Arrays.asList(classpathUrls));
-    Set<URL> completeUrls = ClasspathHelper.forManifest(initialUrls);
+    Collection<URL> completeUrls = ClasspathHelper.forManifest(initialUrls);
     Configuration config = new ConfigurationBuilder()
       .setUrls(completeUrls)
-      .setScanners(new TypeAnnotationsScanner())
+      .setScanners(new TypeAnnotationsScanner(), new SubTypesScanner())
       .addClassLoader(classLoader)
       .useParallelExecutor();
     Reflections reflections = new Reflections(config);

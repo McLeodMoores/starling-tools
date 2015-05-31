@@ -5,20 +5,46 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.opengamma</groupId>
+  <groupId>com.mcleodmoores.opengamma</groupId>
   <artifactId>corporate-parent</artifactId>
   <packaging>pom</packaging>
   <name>Corporate-Parent</name>
-  <version>2.0.0-RC2</version>
-  <description>OpenGamma maven corporate parent project</description>
+  <version>1.1.0-SNAPSHOT</version>
+  <description>McLeod Moores maven corporate parent project</description>
   <organization>
-    <name>OpenGamma</name>
-    <url>http://www.opengamma.com</url>
+    <name>McLeod Moores Software Limited</name>
+    <url>http://www.mcleodmoores.com</url>
   </organization>
+
+  <distributionManagement>
+    <repository>
+      <id>private</id>
+      <name>McLeod Moores private maven repository</name>
+      <url>http://maven.mcleodmoores.com:8081/content/repositories/private</url>
+    </repository>
+    <snapshotRepository>
+      <id>private-snapshot</id>
+      <name>McLeod Moores private maven snapshot repository</name>
+      <url>http://maven.mcleodmoores.com:8081/content/repositories/private-snapshot</url>
+    </snapshotRepository>
+  </distributionManagement> 
 
   <!-- ==================================================================== -->
   <!-- OpenGamma public repositories -->
   <repositories>
+    <repository>
+      <id>private</id>
+      <name>McLeod Moores private maven repository</name>
+      <url>http://maven.mcleodmoores.com:8081/content/repositories/private</url>
+    </repository>
+    <repository>
+      <id>private-snapshot</id>
+      <name>McLeod Moores private maven snapshot repository</name>
+      <url>http://maven.mcleodmoores.com:8081/content/repositories/private-snapshot</url>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </repository>
     <repository>
       <id>og-public</id>
       <name>OG Public</name>
@@ -580,9 +606,9 @@
     <mockito.version>1.9.5</mockito.version>
 
     <!-- Properties for maven-compiler-plugin -->
-    <maven.compiler.compilerVersion>1.8</maven.compiler.compilerVersion>
-    <maven.compiler.source>1.8</maven.compiler.source>
-    <maven.compiler.target>1.8</maven.compiler.target>
+    <maven.compiler.compilerVersion>1.7</maven.compiler.compilerVersion>
+    <maven.compiler.source>1.7</maven.compiler.source>
+    <maven.compiler.target>1.7</maven.compiler.target>
     <maven.compiler.fork>true</maven.compiler.fork>
     <maven.compiler.verbose>true</maven.compiler.verbose>
     <!-- Properties for maven-javadoc-plugin -->

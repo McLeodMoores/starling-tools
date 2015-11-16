@@ -7,7 +7,7 @@ package com.opengamma.maven;
 
 //CSOFF for Javadoc tags
 /**
- * Runs an OpenGamma component server.
+ * Runs an Starling component server.
  * 
  * @goal server-start
  * @requiresDependencyResolution compile+runtime

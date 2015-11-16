@@ -28,7 +28,7 @@ import org.codehaus.plexus.util.xml.pull.XmlPullParserException;
 
 //CSOFF for Javadoc tags
 /**
- * Runs an OpenGamma component server.
+ * Runs an Starling component server.
  * 
  * @goal server-stop
  * @requiresDependencyResolution compile+runtime

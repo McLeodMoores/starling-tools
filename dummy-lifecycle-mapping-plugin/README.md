@@ -1,7 +1,7 @@
-OpenGamma M2E lifecycle mapping hack
+Starling M2E lifecycle mapping hack
 ------------------------------------
 This is a hack to remove a warning from the command line build caused by m2e.
-It simply allows a placeholder jar to be added to the OpenGamma repository that blocks the warnings.
+It simply allows a placeholder jar to be added to the McLeod Moores repository that blocks the warnings.
 Without this dummy plugin, everyone sees this message:
 
 ```
@@ -13,5 +13,3 @@ See the [GitHub project](https://github.com/mfriedenhagen/dummy-lifecycle-mappin
 and the [Stack Overflow](http://stackoverflow.com/questions/7905501/get-rid-of-pom-not-found-warning-for-org-eclipse-m2elifecycle-mapping/) question.
 
 NOTE: This project is publicly available.
-
-[![OpenGamma](http://developers.opengamma.com/res/display/default/chrome/masthead_logo.png "OpenGamma")](http://developers.opengamma.com)

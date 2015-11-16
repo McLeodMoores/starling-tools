@@ -62,7 +62,7 @@ public class ScriptableScriptGeneratorMojo extends AbstractMojo {
 
   /**
    * Set to true to skip all processing, default false.
-   * @parameter alias="skip" property="opengamma.generate.scripts.skip"
+   * @parameter alias="skip" property="starling.generate.scripts.skip"
    */
   private boolean skip;  // CSIGNORE
   /**
@@ -79,12 +79,12 @@ public class ScriptableScriptGeneratorMojo extends AbstractMojo {
    * If this is set, then the unixTemplate and windowsTemplate fields will be
    * set, and a standard set of additional scripts added.
    * Use the 'unix' and 'windows' boolean flags to control which is output.
-   * @parameter alias="type" property="opengamma.generate.scripts.type"
+   * @parameter alias="type" property="starling.generate.scripts.type"
    */
   private String type;  // CSIGNORE
   /**
    * True to generate unix scripts, default true.
-   * @parameter alias="unix" property="opengamma.generate.scripts.unix" default-value="true"
+   * @parameter alias="unix" property="starling.generate.scripts.unix" default-value="true"
    */
   private boolean unix;  // CSIGNORE
   /**
@@ -101,7 +101,7 @@ public class ScriptableScriptGeneratorMojo extends AbstractMojo {
   private Map<String, String> unixTemplatesMap;  // CSIGNORE
   /**
    * True to generate windows scripts, default true.
-   * @parameter alias="windows" property="opengamma.generate.scripts.windows" default-value="true"
+   * @parameter alias="windows" property="starling.generate.scripts.windows" default-value="true"
    */
   private boolean windows;  // CSIGNORE
   /**
@@ -123,7 +123,7 @@ public class ScriptableScriptGeneratorMojo extends AbstractMojo {
   private String[] additionalScripts;  // CSIGNORE
   /**
    * Set to true to create an attached zip archive, default true.
-   * @parameter alias="zip" property="opengamma.generate.scripts.zip" default-value="false"
+   * @parameter alias="zip" property="starling.generate.scripts.zip" default-value="false"
    */
   private boolean zip;  // CSIGNORE
 

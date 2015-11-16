@@ -107,9 +107,9 @@ public abstract class AbstractServerMojo extends AbstractMojo {
     // find by properties file
     if (config != null) {
       ClassLoader loader = MojoUtils.calculateRuntimeClassLoader(project);
-      URL resource = loader.getResource(config + "/opengamma-maven-plugin.properties");
+      URL resource = loader.getResource(config + "/starling-maven-plugin.properties");
       if (resource == null) {
-        throw new MojoFailureException("Unable to find classpath resource: " + config + "/opengamma-maven-plugin.properties");
+        throw new MojoFailureException("Unable to find classpath resource: " + config + "/starling-maven-plugin.properties");
       }
       Properties properties = new Properties();
       try (InputStream in = resource.openStream()) {
@@ -122,7 +122,7 @@ public abstract class AbstractServerMojo extends AbstractMojo {
         vmArgs = properties.getProperty("server.main.vmArgs", vmArgs);
         
       } catch (IOException ex) {
-        throw new MojoFailureException("Unable to read classpath resource: " + config + "/opengamma-maven-plugin.properties");
+        throw new MojoFailureException("Unable to read classpath resource: " + config + "/starling-maven-plugin.properties");
       }
     }
     

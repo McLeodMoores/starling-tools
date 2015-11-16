@@ -1,9 +1,8 @@
-
-OpenGamma plugin for Apache Maven
+Starling plugin for Apache Maven
 ---------------------------------
 
 This project provides a [Maven](https://maven.apache.org/) plugin
-for [OpenGamma](http://developers.opengamma.com/).
+for [Starling](http://www.mcleodmoores.com/starling).
 
 
 #### generate-scripts
@@ -13,7 +12,7 @@ Phase: prepare-package
 Properties:
 - skip
  - Set to true to skip all processing, default false
- - Property = "opengamma.generate.scripts.skip"
+ - Property = "starling.generate.scripts.skip"
 - outputDir
  - Where the scripts should be generated, default ${project.build.directory}/scripts
 - type
@@ -24,16 +23,16 @@ Properties:
    If this is set, then the unixTemplate and windowsTemplate fields will be
    set, and a standard set of additional scripts added.
    Use the 'unix' and 'windows' boolean flags to control which is output.
- - Property = "opengamma.generate.scripts.type"
+ - Property = "starling.generate.scripts.type"
 - unix
  - Set to false to turn off generation of Unix scripts, default true.
- - Property = "opengamma.generate.scripts.unix"
+ - Property = "starling.generate.scripts.unix"
 - unixTemplate
  - The basic template file name on Unix.
    This is used as the default template file name.
 - windows
  - Set to false to turn off generation of Windows scripts, default true.
- - Property = "opengamma.generate.scripts.windows"
+ - Property = "starling.generate.scripts.windows"
 - windowsTemplate
  - The basic template file name on Windows.
    This is used as the default template file name.
@@ -41,19 +40,19 @@ Properties:
  - List of additional scripts to copy unchanged.
 - zip
  - Set to false to turn off creation of an attached zip file, default false.
- - Property = "opengamma.generate.scripts.zip"
+ - Property = "starling.generate.scripts.zip"
 
 
 #### server-init
 
-These initialize an OpenGamma component server.
+These initialize a Starling component server.
 They are intended to be run directly from the command line.
 
-The recommended usage is to setup an opengamma-maven.plugin.properties file, see below.
+The recommended usage is to setup an starling.maven.plugin.properties file, see below.
 
 Properties:
 - config
- - The classpath location of an opengamma-maven.plugin.properties file.
+ - The classpath location of an starling-maven.plugin.properties file.
    Any value set in the properties file override command line arguments.
  - Command line property = "config"
 - className
@@ -71,34 +70,34 @@ Properties:
 Example:
 
 ```
- mvn opengamma:server-init -DconfigFile=toolcontext/toolcontext-examplessimulated.properties
+ mvn starling:server-init -DconfigFile=toolcontext/toolcontext-examplessimulated.properties
 
- mvn opengamma:server-init -Dconfig=fullstack
- // where there is a classpath file fullstack/opengamma-maven.plugin.properties:
- server.init.class = com.opengamma.component.OpenGammaComponentServer
+ mvn starling:server-init -Dconfig=fullstack
+ // where there is a classpath file fullstack/starling-maven.plugin.properties:
+ server.init.class = com.starling.component.OpenGammaComponentServer
  server.init.configFile = classpath:/toolcontext/toolcontext-examplessimulated.properties
 ```
 
 
 #### server-run / server-start
 
-These start and stop an OpenGamma component server.
+These start and stop a Starling component server.
 They are intended to be run directly from the command line.
 
 The `server-run` goal will start the server inline so it can be killed by Ctrl+C.
 
 The `server-start` goal will start the server in the background where it must be killed by `server-stop`.
 
-The recommended usage is to setup an opengamma-maven.plugin.properties file, see below.
+The recommended usage is to setup an starling-maven.plugin.properties file, see below.
 
 Properties:
 - config
- - The classpath location of an opengamma-maven.plugin.properties file.
+ - The classpath location of an starling-maven.plugin.properties file.
    Any value set in the properties file override command line arguments.
  - Command line property = "config"
 - className
  - The server class name to run.
-   The default value of 'com.opengamma.component.OpenGammaComponentServer' is generally sufficient.
+   The default value of 'com.openemma.component.OpenGammaComponentServer' is generally sufficient.
  - Command line property = "className"
 - configFile
  - The component server properties or INI file.
@@ -123,10 +122,10 @@ Properties:
 Examples:
 
 ```
- mvn opengamma:server-run -DconfigFile=fullstack/fullstack-examplessimulated-dev.properties
+ mvn starling:server-run -DconfigFile=fullstack/fullstack-examplessimulated-dev.properties
 
- mvn opengamma:server-run -Dconfig=fullstack
- // where there is a classpath file fullstack/opengamma-maven.plugin.properties:
+ mvn starling:server-run -Dconfig=fullstack
+ // where there is a classpath file fullstack/starling-maven.plugin.properties:
  server.main.class = com.opengamma.component.OpenGammaComponentServer
  server.main.configFile = classpath:/fullstack/fullstack-examplessimulated-dev.properties
 ```
@@ -141,13 +140,13 @@ The `server-stop` goal takes no properties.
 Example:
 
 ```
- mvn opengamma:server-stop
+ mvn starling:server-stop
 ```
 
 
 #### Properties file
 
-The command line can be shortened using a properties file name `opengamma-maven-plugin.properties`.
+The command line can be shortened using a properties file name `starling-maven-plugin.properties`.
 The only command line argument is to the classpath directory whether the file is located.
 
 The following property keys are recognised:

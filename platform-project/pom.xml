@@ -6,18 +6,18 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>com.opengamma</groupId>
+    <groupId>com.mcleodmoores.starling.platform</groupId>
     <artifactId>corporate-parent</artifactId>
-    <version>1.1.3</version>
+    <version>1.1.0-SNAPSHOT</version>
     <relativePath></relativePath>
   </parent>
-  <groupId>com.opengamma.platform</groupId>
-  <artifactId>og-platform-project</artifactId>
-  <version>2.1.0</version>
+  <groupId>com.mcleodmoores.starling.platform</groupId>
+  <artifactId>platform-project</artifactId>
+  <version>1.1.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
-  <name>OG-Platform-Project</name>
-  <description>OG Platform Project Parent POM</description>
+  <name>platform-project</name>
+  <description>Starling Platform Project Parent POM</description>
 
   <!-- ==================================================================== -->
   <!-- main child build -->
@@ -104,9 +104,9 @@
             <configuration>
               <artifactItems>
                 <artifactItem>
-                  <groupId>com.opengamma.platform</groupId>
-                  <artifactId>og-web</artifactId>
-                  <version>${og.version}</version>
+                  <groupId>com.mcleodmoores.starling.platform</groupId>
+                  <artifactId>web</artifactId>
+                  <version>${starling.version}</version>
                   <type>zip</type>
                   <classifier>web-engine</classifier>
                   <overWrite>true</overWrite>
@@ -124,9 +124,9 @@
             <configuration>
               <artifactItems>
                 <artifactItem>
-                  <groupId>com.opengamma.platform</groupId>
-                  <artifactId>og-web</artifactId>
-                  <version>${og.version}</version>
+                  <groupId>com.mcleodmoores.starling.platform</groupId>
+                  <artifactId>web</artifactId>
+                  <version>${starling.version}</version>
                   <type>zip</type>
                   <classifier>web-sharedmasters</classifier>
                   <overWrite>true</overWrite>
@@ -144,9 +144,9 @@
             <configuration>
               <artifactItems>
                 <artifactItem>
-                  <groupId>com.opengamma.platform</groupId>
-                  <artifactId>og-web</artifactId>
-                  <version>${og.version}</version>
+                  <groupId>com.mcleodmoores.starling.platform</groupId>
+                  <artifactId>web</artifactId>
+                  <version>${starling.version}</version>
                   <type>zip</type>
                   <classifier>web-marketdata</classifier>
                   <overWrite>true</overWrite>
@@ -162,8 +162,8 @@
         <artifactId>maven-assembly-plugin</artifactId>
         <dependencies>
           <dependency>
-            <groupId>com.opengamma.platform</groupId>
-            <artifactId>og-platform-project-assembly</artifactId>
+            <groupId>com.mcleodmoores.starling.platform</groupId>
+            <artifactId>platform-project-assembly</artifactId>
             <version>1.1.0</version>
           </dependency>
         </dependencies>
@@ -176,11 +176,11 @@
             </goals>
             <configuration>
               <descriptorRefs>
-                <descriptorRef>assembly-server-${og.assembly.server}</descriptorRef>
+                <descriptorRef>assembly-server-${starling.assembly.server}</descriptorRef>
               </descriptorRefs>
               <tarLongFileMode>gnu</tarLongFileMode>
               <attach>false</attach>
-              <skipAssembly>${og.assembly.server.skip}</skipAssembly>
+              <skipAssembly>${starling.assembly.server.skip}</skipAssembly>
             </configuration>
           </execution>
           <execution>
@@ -191,11 +191,11 @@
             </goals>
             <configuration>
               <descriptorRefs>
-                <descriptorRef>assembly-server-${og.assembly.server.dir}</descriptorRef>
+                <descriptorRef>assembly-server-${starling.assembly.server.dir}</descriptorRef>
               </descriptorRefs>
               <finalName>server-dir</finalName>
               <appendAssemblyId>false</appendAssemblyId>
-              <skipAssembly>${og.assembly.server.dir.skip}</skipAssembly>
+              <skipAssembly>${starling.assembly.server.dir.skip}</skipAssembly>
             </configuration>
           </execution>
         </executions>
@@ -206,9 +206,9 @@
   <!-- ==================================================================== -->
   <dependencies>
     <dependency>
-      <groupId>com.opengamma.platform</groupId>
-      <artifactId>og-integration</artifactId>
-      <version>${og.version}</version>
+      <groupId>com.mcleodmoores.starling.platform</groupId>
+      <artifactId>integration</artifactId>
+      <version>${starling.version}</version>
     </dependency>
 
     <dependency>
@@ -348,8 +348,8 @@
         </file>
       </activation>
       <properties>
-        <og.assembly.server.skip>true</og.assembly.server.skip>
-        <og.assembly.server.dir.skip>true</og.assembly.server.dir.skip>
+        <starling.assembly.server.skip>true</starling.assembly.server.skip>
+        <starling.assembly.server.dir.skip>true</starling.assembly.server.dir.skip>
       </properties>
     </profile>
   </profiles>
@@ -357,11 +357,11 @@
   <!-- ==================================================================== -->
   <properties>
     <!-- Properties for child projects -->
-    <og.version>${project.version}</og.version>
-    <og.assembly.server>unix-tarbz2</og.assembly.server><!-- or 'windows-zip' or 'combined' -->
-    <og.assembly.server.dir>combined-dir</og.assembly.server.dir>
-    <og.assembly.server.skip>false</og.assembly.server.skip>
-    <og.assembly.server.dir.skip>false</og.assembly.server.dir.skip>
+    <starling.version>${project.version}</starling.version>
+    <starling.assembly.server>unix-tarbz2</starling.assembly.server><!-- or 'windows-zip' or 'combined' -->
+    <starling.assembly.server.dir>combined-dir</starling.assembly.server.dir>
+    <starling.assembly.server.skip>false</starling.assembly.server.skip>
+    <starling.assembly.server.dir.skip>false</starling.assembly.server.dir.skip>
     <!-- Properties for OpenGamma plugin -->
     <opengamma.generate.scripts.type>tool</opengamma.generate.scripts.type>
     <!-- Properties for testing -->

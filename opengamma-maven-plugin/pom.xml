@@ -6,17 +6,17 @@
   <modelVersion>4.0.0</modelVersion>
   
   <parent>
-    <groupId>com.opengamma</groupId>
+    <groupId>com.mcleodmoores.starling.platform</groupId>
     <artifactId>corporate-parent</artifactId>
-    <version>1.1.7</version>
+    <version>1.1.0-SNAPSHOT</version>
     <relativePath></relativePath>
   </parent>  
-  <groupId>com.opengamma.tools</groupId>
-  <artifactId>opengamma-maven-plugin</artifactId>
-  <version>1.4.2</version>
+  <groupId>com.mcleodmoores.starling.tools</groupId>
+  <artifactId>starling-maven-plugin</artifactId>
+  <version>1.1.0-SNAPSHOT</version>
   <packaging>maven-plugin</packaging>
-  <name>OpenGamma Maven Plugin</name>
-  <description>OpenGamma plugin for Apache Maven</description>
+  <name>Starling Maven Plugin</name>
+  <description>Starling plugin for Apache Maven</description>
 
   <!-- ==================================================================== -->
   <licenses>
@@ -27,9 +27,9 @@
     </license>
   </licenses>
   <scm>
-    <connection>scm:git:git://github.com/OpenGamma/OG-Tools.git</connection>
-    <developerConnection>scm:git:https://github.com/OpenGamma/OG-Tools.git</developerConnection>
-    <url>https://github.com/OpenGamma/OG-Tools</url>
+    <connection>scm:git:git://github.com/McLeodMoores/starling-tools.git</connection>
+    <developerConnection>scm:git:https://github.com/McLeodMoores/starling-tools.git</developerConnection>
+    <url>https://github.com/McLeodMoores/starling-tools/tree/master/starling-maven-plugin</url>
   </scm>
 
   <!-- ==================================================================== -->
@@ -37,9 +37,17 @@
   <!-- duplicated from corporate-pom to ensure this pom builds from scratch -->
   <repositories>
     <repository>
-      <id>og-public</id>
-      <name>OG Public</name>
-      <url>http://maven.opengamma.com/nexus/content/groups/public</url>
+      <id>private</id>
+      <name>McLeod Moores private maven repository</name>
+      <url>http://maven.mcleodmoores.com:8081/content/repositories/private</url>
+    </repository>
+    <repository>
+      <id>private-snapshot</id>
+      <name>McLeod Moores private maven snapshot repository</name>
+      <url>http://maven.mcleodmoores.com:8081/content/repositories/private-snapshot</url>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
     </repository>
   </repositories>
 
@@ -52,9 +60,9 @@
         <artifactId>maven-checkstyle-plugin</artifactId>
         <dependencies>
           <dependency>
-            <groupId>com.opengamma.tools</groupId>
+            <groupId>com.mcleodmoores.starling.tools</groupId>
             <artifactId>build-tools</artifactId>
-            <version>1.2.2</version>
+            <version>1.1.0-SNAPSHOT</version>
           </dependency>
         </dependencies>
         <configuration>
@@ -81,9 +89,9 @@
   <!-- ==================================================================== -->
   <dependencies>
     <dependency>
-      <groupId>com.opengamma.tools</groupId>
+      <groupId>com.mcleodmoores.starling.tools</groupId>
       <artifactId>scripts</artifactId>
-      <version>1.4.2</version>
+      <version>1.1.0-SNAPSHOT</version>
     </dependency>
     <dependency>
       <groupId>org.apache.maven</groupId>
@@ -121,11 +129,15 @@
   <!-- ==================================================================== -->
   <distributionManagement>
     <repository>
-      <id>og-public-release</id>
-      <name>OpenGamma public maven repository</name>
-      <url>${og-public-release.url}</url>
-      <layout>default</layout>
+      <id>private</id>
+      <name>McLeod Moores private maven repository</name>
+      <url>http://maven.mcleodmoores.com:8081/content/repositories/private</url>
     </repository>
+    <snapshotRepository>
+      <id>private-snapshot</id>
+      <name>McLeod Moores private maven snapshot repository</name>
+      <url>http://maven.mcleodmoores.com:8081/content/repositories/private-snapshot</url>
+    </snapshotRepository>
   </distributionManagement>
 
   <!-- ==================================================================== -->

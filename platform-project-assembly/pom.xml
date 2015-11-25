@@ -7,13 +7,13 @@
   <parent>
     <groupId>com.mcleodmoores.starling.platform</groupId>
     <artifactId>corporate-parent</artifactId>
-    <version>1.1.3</version>
+    <version>1.1.0-SNAPSHOT</version>
     <relativePath></relativePath>
   </parent>
 
   <groupId>com.mcleodmoores.starling.platform</groupId>
   <artifactId>platform-project-assembly</artifactId>
-  <version>1.1.0</version>
+  <version>1.1.0-SNAPSHOT</version>
 
   <name>platform-project-assembly</name>
   <description>Starling Platform Project shared assembly</description>
@@ -37,14 +37,11 @@
       <name>McLeod Moores private maven repository</name>
       <url>http://maven.mcleodmoores.com:8081/content/repositories/private</url>
     </repository>
-    <repository>
+    <snapshotRepository>
       <id>private-snapshot</id>
       <name>McLeod Moores private maven snapshot repository</name>
       <url>http://maven.mcleodmoores.com:8081/content/repositories/private-snapshot</url>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-    </repository>
+    </snapshotRepository>
   </distributionManagement>
 
 </project>

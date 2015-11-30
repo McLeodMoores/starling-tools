@@ -19,7 +19,6 @@
       <distribution>repo</distribution>
     </license>
   </licenses>
-
   <modules>
     <module>build-tools</module>
     <module>corporate-parent</module>

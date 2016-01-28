@@ -129,7 +129,7 @@
   <module name="SuppressionCommentFilter"/>
   <!-- Header inlined due to m2e -->
   <module name="RegexpHeader">
-    <property name="header" value="^/\*[*]?\n^ \* Copyright \(C\) (2009|20[1-2][0-9]) - [P-p]resent by "/>
+    <property name="header" value="^/\*[*]?\n^ \* Copyright \(C\) (2009|20[1-2][0-9]) - [P-p]resent (by OpenGamma|McLeod) "/>
     <property name="fileExtensions" value="java,proto"/>
     <!-- property name="severity" value="error"/   proto generated files cause errors-->
   </module>

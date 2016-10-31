@@ -37,14 +37,14 @@
   <!-- duplicated from corporate-pom to ensure this pom builds from scratch -->
   <repositories>
     <repository>
-      <id>private</id>
-      <name>McLeod Moores private maven repository</name>
-      <url>http://maven.mcleodmoores.com:8081/content/repositories/private</url>
+      <id>releases</id>
+      <name>McLeod Moores public maven repository</name>
+      <url>http://maven.mcleodmoores.com:8081/content/repositories/releases</url>
     </repository>
     <repository>
-      <id>private-snapshot</id>
-      <name>McLeod Moores private maven snapshot repository</name>
-      <url>http://maven.mcleodmoores.com:8081/content/repositories/private-snapshot</url>
+      <id>snapshots</id>
+      <name>McLeod Moores public maven snapshot repository</name>
+      <url>http://maven.mcleodmoores.com:8081/content/repositories/snapshots</url>
       <snapshots>
         <enabled>true</enabled>
       </snapshots>
@@ -129,14 +129,14 @@
   <!-- ==================================================================== -->
   <distributionManagement>
     <repository>
-      <id>private</id>
-      <name>McLeod Moores private maven repository</name>
-      <url>http://maven.mcleodmoores.com:8081/content/repositories/private</url>
+      <id>releases</id>
+      <name>McLeod Moores public maven repository</name>
+      <url>http://maven.mcleodmoores.com:8081/content/repositories/releases</url>
     </repository>
     <snapshotRepository>
-      <id>private-snapshot</id>
-      <name>McLeod Moores private maven snapshot repository</name>
-      <url>http://maven.mcleodmoores.com:8081/content/repositories/private-snapshot</url>
+      <id>snapshots</id>
+      <name>McLeod Moores public maven snapshot repository</name>
+      <url>http://maven.mcleodmoores.com:8081/content/repositories/snapshots</url>
     </snapshotRepository>
   </distributionManagement>
 

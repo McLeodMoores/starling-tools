@@ -18,14 +18,14 @@
 
   <distributionManagement>
     <repository>
-      <id>private</id>
-      <name>McLeod Moores private maven repository</name>
-      <url>http://maven.mcleodmoores.com:8081/content/repositories/private</url>
+      <id>releases</id>
+      <name>McLeod Moores public release repository</name>
+      <url>http://maven.mcleodmoores.com:8081/content/repositories/releases</url>
     </repository>
     <snapshotRepository>
-      <id>private-snapshot</id>
+      <id>snapshots</id>
       <name>McLeod Moores private maven snapshot repository</name>
-      <url>http://maven.mcleodmoores.com:8081/content/repositories/private-snapshot</url>
+      <url>http://maven.mcleodmoores.com:8081/content/repositories/snapshots</url>
     </snapshotRepository>
   </distributionManagement> 
 
@@ -35,29 +35,17 @@
     <repository>
       <id>private</id>
       <name>McLeod Moores private maven repository</name>
-      <url>http://maven.mcleodmoores.com:8081/content/repositories/private</url>
+      <url>http://maven.mcleodmoores.com:8081/content/repositories/releases</url>
     </repository>
     <repository>
       <id>private-snapshot</id>
       <name>McLeod Moores private maven snapshot repository</name>
-      <url>http://maven.mcleodmoores.com:8081/content/repositories/private-snapshot</url>
+      <url>http://maven.mcleodmoores.com:8081/content/repositories/snapshots</url>
       <snapshots>
         <enabled>true</enabled>
       </snapshots>
     </repository>
-    <repository>
-      <id>og-public</id>
-      <name>OG Public</name>
-      <url>http://maven.opengamma.com/nexus/content/groups/public</url>
-    </repository>
   </repositories>
-  <pluginRepositories>
-    <pluginRepository>
-      <id>og-public</id>
-      <name>OG Public</name>
-      <url>http://maven.opengamma.com/nexus/content/groups/public</url>
-    </pluginRepository>
-  </pluginRepositories>
 
   <!-- ==================================================================== -->
   <build>

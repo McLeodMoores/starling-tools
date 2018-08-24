@@ -33,18 +33,18 @@
   </scm>
 
   <!-- ==================================================================== -->
-  <!-- OpenGamma public repositories -->
+  <!-- Public repositories -->
   <!-- duplicated from corporate-pom to ensure this pom builds from scratch -->
   <repositories>
     <repository>
       <id>releases</id>
       <name>McLeod Moores public maven repository</name>
-      <url>http://maven.mcleodmoores.com:8081/content/repositories/releases</url>
+      <url>http://maven.mcleodmoores.com/artifactory/releases</url>
     </repository>
     <repository>
       <id>snapshots</id>
       <name>McLeod Moores public maven snapshot repository</name>
-      <url>http://maven.mcleodmoores.com:8081/content/repositories/snapshots</url>
+      <url>http://maven.mcleodmoores.com/artifactory/snapshots</url>
       <snapshots>
         <enabled>true</enabled>
       </snapshots>

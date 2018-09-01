@@ -12,6 +12,11 @@
   <property name="severity" value="warning"/>
   <module name="TreeWalker">
     <property name="tabWidth" value="4"/>
+    <module name="SuppressWithNearbyCommentFilter">
+      <property name="commentFormat" value="CSIGNORE"/>
+      <property name="checkFormat" value=".*"/>
+      <property name="influenceFormat" value="0"/>
+    </module>
     <!--module name="FileContentsHolder"/-->
     <module name="JavadocMethod">
       <property name="scope" value="package"/>

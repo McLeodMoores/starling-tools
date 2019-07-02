@@ -7,13 +7,13 @@
   <parent>
     <groupId>com.mcleodmoores.starling.platform</groupId>
     <artifactId>corporate-parent</artifactId>
-    <version>1.1.0-SNAPSHOT</version>
+    <version>1.5.0</version>
     <relativePath>../corporate-parent</relativePath>
   </parent>
 
   <groupId>com.mcleodmoores.starling.platform</groupId>
   <artifactId>platform-project-assembly</artifactId>
-  <version>1.1.0-SNAPSHOT</version>
+  <version>1.5.0</version>
 
   <name>platform-project-assembly</name>
   <description>Starling Platform Project shared assembly</description>

@@ -9,7 +9,7 @@
   <artifactId>corporate-parent</artifactId>
   <packaging>pom</packaging>
   <name>corporate-parent</name>
-  <version>1.1.0-SNAPSHOT</version>
+  <version>1.5.0</version>
   <description>Starling maven corporate parent project</description>
   <organization>
     <name>McLeod Moores Software Limited</name>
@@ -597,7 +597,7 @@
     <buildnumber-maven-plugin.version>1.3</buildnumber-maven-plugin.version>
     <exec-maven-plugin.version>1.3.2</exec-maven-plugin.version>
     <jacoco-maven-plugin.version>0.7.2.201409121644</jacoco-maven-plugin.version>
-    <starling-maven-plugin.version>1.1.0-SNAPSHOT</starling-maven-plugin.version>
+    <starling-maven-plugin.version>1.5.0</starling-maven-plugin.version>
     <joda-beans-maven-plugin.version>1.0</joda-beans-maven-plugin.version>
     <!-- Dependency versions -->
     <testng.version>6.8.8</testng.version>

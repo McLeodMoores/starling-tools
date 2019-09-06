@@ -281,9 +281,9 @@
                     </banDuplicateClasses>
                     <!-- ensure dependencies resolve to latest version (removed as randomly fails MENFORCER-134) -->
                     <!--requireUpperBoundDeps /-->
-                    <!-- need Java 7 or greater -->
+                    <!-- need Java 8 or greater -->
                     <requireJavaVersion>
-                      <version>[1.7,)</version>
+                      <version>[1.8,)</version>
                     </requireJavaVersion>
                     <requirePluginVersions>
                     </requirePluginVersions>
